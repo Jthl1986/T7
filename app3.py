@@ -754,7 +754,8 @@ def app5():
 #configuraciones de página   
 lottie_book = load_lottieurl('https://assets7.lottiefiles.com/packages/lf20_d7OjnJ.json')
 with st.sidebar:
-    st.image('https://github.com/Jthl1986/T7/blob/master/kisspng-sustainable-agriculture-sustainability-computer-ic-agriculture-5abc4783cb0219.9797877115222885158315.png', use_column_width=True)
+    url = "https://raw.githubusercontent.com/Jthl1986/T7/blob/master/kisspng-sustainable-agriculture-sustainability-computer-ic-agriculture-5abc4783cb0219.9797877115222885158315.png"
+    st.image(url, width=300)
     st.title('Agro App')
     st.markdown("---")
 my_button = st.sidebar.radio("Modulos",('Planteo productivo', 'Condiciones climáticas', 'Tenencia granos', 'Tenencia hacienda', 'Servicios agrícolas', 'Cuadro resumen'))
