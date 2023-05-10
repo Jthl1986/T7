@@ -772,7 +772,8 @@ else:
     app4()
   
 rss_url = "https://bichosdecampo.com/feed/"
-rss_url1 = "https://www.infocampo.com.ar/feed/"
+rss_url1 = "https://www.lanacion.com.ar/economia/agroindustria/precios-de-granos.html?outputType=rss"
+#https://www.infocampo.com.ar/feed/
 feed = feedparser.parse(rss_url)
 feed1 = feedparser.parse(rss_url1)
 
