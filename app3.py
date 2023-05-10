@@ -759,7 +759,6 @@ with st.sidebar:
     st.markdown('<h1 style="margin-top: -110px; text-align: center;">AgroApp</h1>', unsafe_allow_html=True)
 st.markdown('<div style="margin-top: -200px;">', unsafe_allow_html=True)
 my_button = st.sidebar.radio("Modulos",('Planteo productivo', 'Condiciones climáticas', 'Tenencia granos', 'Tenencia hacienda', 'Servicios agrícolas', 'Cuadro resumen'))
-st.markdown('</div>', unsafe_allow_html=True)
 if my_button == 'Tenencia hacienda':
     app()
 elif my_button == 'Tenencia granos':
@@ -772,7 +771,8 @@ elif my_button == 'Cuadro resumen':
     app5()
 else:    
     app4()
-    
+st.markdown('</div>', unsafe_allow_html=True)
+  
 rss_url = "https://bichosdecampo.com/feed/"
 rss_url1 = "https://www.infocampo.com.ar/feed/"
 feed = feedparser.parse(rss_url)
