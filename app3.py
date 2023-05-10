@@ -778,7 +778,7 @@ feed1 = feedparser.parse(rss_url1)
 
 with st.sidebar:
     st.markdown("---")
-    st.markdown('<h4 style="margin-top: -20px; text-align: left;">Noticias</h4>', unsafe_allow_html=True)
+    st.markdown('<h0 style="margin-top: -20px; text-align: left;">Noticias</h0>', unsafe_allow_html=True)
     with st.spinner('Cargando noticias...'):
         news_html = ""
         for item in feed["items"][:10]:
