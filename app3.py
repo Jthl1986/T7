@@ -758,7 +758,7 @@ with st.sidebar:
     """
     <style>
         .sidebar .sidebar-content {
-            margin-top: 20px;
+            margin-top: 0px;
         }
     </style>
     """,
