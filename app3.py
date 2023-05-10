@@ -772,10 +772,11 @@ else:
     app4()
   
 rss_url = "https://bichosdecampo.com/feed/"
-rss_url1 = "https://www.lanacion.com.ar/economia/agroindustria/precios-de-granos.html?outputType=rss"
-#https://www.infocampo.com.ar/feed/
+rss_url1 = "https://www.infocampo.com.ar/feed/"
+rss_url2 = "https://www.lanacion.com.ar/economia/agroindustria/precios-de-granos.html?outputType=rss"
 feed = feedparser.parse(rss_url)
 feed1 = feedparser.parse(rss_url1)
+feed2 = feedparser.parse(rss_url2)
 
 with st.sidebar:
     st.markdown("---")
@@ -790,6 +791,11 @@ with st.sidebar:
         for item in feed1["items"][:10]:
             news_html += f'<a href="{item["link"]}" target="_blank">{item["title"]}</a> | '
         st.components.v1.html(f'<marquee behavior="scroll" direction="left" scrollamount="4">{news_html}</marquee>', height=30)
+    with st.spinner('Cargando noticias...'):
+        news_html = ""
+        for item in feed2["items"][:10]:
+            news_html += f'<span>{item["title"]}</span> | '
+        st.components.v1.html(f'<marquee behavior="scroll" direction="left" scrollamount="6">{news_html}</marquee>', height=30)
     st.markdown("---")
     st.caption("Desarrollado por JSantacecilia para Equipo Agro Banco Credicoop")
     st_lottie(lottie_book, speed=0.5, height=50, key="initial")
