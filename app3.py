@@ -769,17 +769,23 @@ elif my_button == 'Cuadro resumen':
     app5()
 else:    
     app4()
+    
+rss_url = "https://bichosdecampo.com/feed/"
+feed = feedparser.parse(rss_url)
+
 with st.sidebar:
     st.markdown("---")
     st_lottie(lottie_book, speed=0.5, height=50, key="initial")
     st.markdown("---")
     st.caption("Desarrollado por JSantacecilia para Equipo Agro Banco Credicoop")
-    rss_url = "https://bichosdecampo.com/feed/"
-    feed = feedparser.parse(rss_url)
-
-    with marquee.marquee():
-            for item in feed["items"][:5]:
-                st.markdown(f"""<a href="{item['link']}" target="_blank">{item['title']}</a>""")
+    
+with st.sidebar:
+    st.title("Noticias")
+    with st.spinner('Cargando noticias...'):
+        news_html = ""
+        for item in feed["items"][:5]:
+            news_html += f'<a href="{item["link"]}" target="_blank">{item["title"]}</a> | '
+        st.components.v1.html(f'<marquee behavior="scroll" direction="left" scrollamount="4">{news_html}</marquee>', height=50)
 
             
 # Mantenimiento app
