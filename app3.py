@@ -783,12 +783,12 @@ with st.sidebar:
         news_html = ""
         for item in feed["items"][:10]:
             news_html += f'<a href="{item["link"]}" target="_blank">{item["title"]}</a> | '
-        st.components.v1.html(f'<marquee behavior="scroll" direction="left" scrollamount="6">{news_html}</marquee>', height=30, style='margin-bottom: -10px;')
+        st.components.v1.html(f'<marquee behavior="scroll" direction="left" scrollamount="6">{news_html}</marquee>', height=30)
     with st.spinner('Cargando noticias...'):
         news_html = ""
         for item in feed1["items"][:10]:
             news_html += f'<a href="{item["link"]}" target="_blank">{item["title"]}</a> | '
-        st.components.v1.html(f'<marquee behavior="scroll" direction="left" scrollamount="4">{news_html}</marquee>', height=30,  style='margin-bottom: -10px;')
+        st.components.v1.html(f'<marquee behavior="scroll" direction="left" scrollamount="4">{news_html}</marquee>', height=30)
     st.markdown("---")
     st.caption("Desarrollado por JSantacecilia para Equipo Agro Banco Credicoop")
     st_lottie(lottie_book, speed=0.5, height=50, key="initial")
