@@ -777,9 +777,9 @@ with st.sidebar:
     rss_url = "https://bichosdecampo.com/feed/"
     feed = feedparser.parse(rss_url)
 
-    with marquee():
-        for item in feed["items"][:5]:
-            st.markdown(f"""<a href="{item['link']}" target="_blank">{item['title']}</a>""")
+    with marquee.marquee():
+            for item in feed["items"][:5]:
+                st.markdown(f"""<a href="{item['link']}" target="_blank">{item['title']}</a>""")
 
             
 # Mantenimiento app
