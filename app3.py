@@ -774,7 +774,6 @@ rss_url = "https://bichosdecampo.com/feed/"
 feed = feedparser.parse(rss_url)
 
 with st.sidebar:
-    st.markdown("---")
     st.title("Noticias")
     with st.spinner('Cargando noticias...'):
         news_html = ""
