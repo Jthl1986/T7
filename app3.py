@@ -776,10 +776,11 @@ with st.sidebar:
     st.caption("Desarrollado por JSantacecilia para Equipo Agro Banco Credicoop")
     rss_url = "https://bichosdecampo.com/feed/"
     feed = feedparser.parse(rss_url)
-    st.title("Noticias")
+
     with marquee():
         for item in feed["items"][:5]:
             st.markdown(f"""<a href="{item['link']}" target="_blank">{item['title']}</a>""")
+
             
 # Mantenimiento app
 # psorgo l149
