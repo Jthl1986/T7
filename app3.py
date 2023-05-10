@@ -773,6 +773,9 @@ else:
 rss_url = "https://bichosdecampo.com/feed/"
 feed = feedparser.parse(rss_url)
 
+st.markdown("<br>", unsafe_allow_html=True) # agregar un salto de línea
+st.markdown("<style>.sidebar-content > div{margin-bottom: 30px !important;}</style>", unsafe_allow_html=True) # agregar un margen inferior al título
+
 with st.sidebar:
     st.title("Noticias")
     with st.spinner('Cargando noticias...'):
