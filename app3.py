@@ -781,7 +781,7 @@ with st.sidebar:
     with marquee.marquee():
         for item in feed["items"][:5]:
             st.markdown(f"""<a href="{item['link']}" target="_blank">{item['title']}</a>""")
-
+            
 # Mantenimiento app
 # psorgo l149
 # parametros servicios agricolas l210 - 211 -212 y expanders l256, 258 y 260
