@@ -754,7 +754,7 @@ def app5():
 #configuraciones de página   
 lottie_book = load_lottieurl('https://assets7.lottiefiles.com/packages/lf20_d7OjnJ.json')
 with st.sidebar:
-    url = "https://raw.githubusercontent.com/Jthl1986/T7/blob/master/pngwing.com.png"
+    url = "https://raw.githubusercontent.com/Jthl1986/T7/master/pngwing.com.png"
     st.image(url, width=300)
     st.title('Agro App')
     st.markdown("---")
