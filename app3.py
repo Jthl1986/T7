@@ -756,7 +756,7 @@ lottie_book = load_lottieurl('https://assets7.lottiefiles.com/packages/lf20_d7Oj
 with st.sidebar:
     url = "https://raw.githubusercontent.com/Jthl1986/T7/master/—Pngtree—pin map leaf sprout agriculture_3554514.png"
     st.image(url, width=300)
-    st.title('Agro App')
+    st.title('          Agro App')
     st.markdown("---")
 my_button = st.sidebar.radio("Modulos",('Planteo productivo', 'Condiciones climáticas', 'Tenencia granos', 'Tenencia hacienda', 'Servicios agrícolas', 'Cuadro resumen'))
 if my_button == 'Tenencia hacienda':
