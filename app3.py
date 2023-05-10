@@ -754,6 +754,16 @@ def app5():
 #configuraciones de página   
 lottie_book = load_lottieurl('https://assets7.lottiefiles.com/packages/lf20_d7OjnJ.json')
 with st.sidebar:
+    st.markdown(
+    """
+    <style>
+        .sidebar .sidebar-content {
+            margin-top: 20px;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True,
+    )
     st.title('Agro App')
     st.markdown("---")
 my_button = st.sidebar.radio("Modulos",('Planteo productivo', 'Condiciones climáticas', 'Tenencia granos', 'Tenencia hacienda', 'Servicios agrícolas', 'Cuadro resumen'))
