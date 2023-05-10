@@ -773,7 +773,7 @@ else:
   
 rss_url = "https://bichosdecampo.com/feed/"
 rss_url1 = "https://www.infocampo.com.ar/feed/"
-rss_url2 = "https://www.lanacion.com.ar/economia/agroindustria/precios-de-granos.html?outputType=rss"
+rss_url2 = "https://www.infocampo.com.ar/categoria/mercados/feed/"
 feed = feedparser.parse(rss_url)
 feed1 = feedparser.parse(rss_url1)
 feed2 = feedparser.parse(rss_url2)
