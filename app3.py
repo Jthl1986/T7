@@ -446,6 +446,18 @@ def app4():
     if submit2:
         st.session_state.df1 = [arrendamiento, gast, aparceria]
         
+    def gastos_estructura(nro_hectareas):
+        m = -0.078
+        b = 296
+        return round(m * nro_hectareas + b, 2)
+
+    st.title("Estimador de gastos de estructura")
+
+    nro_hectareas = st.number_input("Ingrese el número de hectáreas", min_value=0)
+
+    if nro_hectareas > 0:
+        gastos = gastos_estructura(nro_hectareas)
+        st.write("Los gastos de estructura estimados para", nro_hectareas, "hectáreas son de", gastos, "dólares por hectárea.")        
     
 
 def app5():
