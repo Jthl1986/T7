@@ -24,6 +24,8 @@ from bs4 import BeautifulSoup
 import streamlit_marquee as marquee
 import altair as alt
 
+st.set_page_config(page_title="AgroAppCredicoop",page_icon="🌱",layout="wide") 
+
 hide_github_link = """
 <style>
 #MainMenu {visibility: hidden;}
@@ -31,7 +33,6 @@ footer {visibility: hidden;}
 </style>
 """
 st.markdown(hide_github_link, unsafe_allow_html=True)
-st.set_page_config(page_title="AgroAppCredicoop",page_icon="🌱",layout="wide") 
 
 @st.experimental_memo
 def load_unpkg(src: str) -> str:
