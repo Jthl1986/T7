@@ -329,8 +329,6 @@ def app4():
     right.metric("Dolar oficial", '${:,}'.format(float(dol)))
     right.write("Cuadro gastos:")
     form2 = right.form("template_form2") 
-    
-    arrendamiento = form2.number_input("Gastos de arrendamiento", step=1)
     aparceria = form2.number_input("Porcentaje de aparcería", step=1)
     aparceria = aparceria/100
     
@@ -461,6 +459,7 @@ def app4():
             gestimado = gastos*nro_hectareas*dol
     
     gestimado_str = "${:,.0f}".format(gestimado)    
+    arrendamiento = form2.number_input("Gastos de arrendamiento", step=1)
     gast = form2.number_input(f"Gastos de estructura - Estimador: {gestimado_str}", step=1)
     submit2 = form2.form_submit_button("Ingresar")
     
