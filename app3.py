@@ -32,7 +32,7 @@ hide_github_link = """
 footer {visibility: hidden;}
 </style>
 """
-st.markdown(hide_github_link, unsafe_allow_html=True)
+#st.markdown(hide_github_link, unsafe_allow_html=True)
 
 @st.experimental_memo
 def load_unpkg(src: str) -> str:
