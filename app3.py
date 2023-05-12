@@ -458,7 +458,7 @@ def app4():
     if nro_hectareas > 0:
         gastos = gastos_estructura(nro_hectareas)
         gestimado = gastos*nro_hectareas*dol
-        st.write("Los gastos de estructura estimados son", gestimado)
+        st.write("Los gastos de estructura estimados son", round(gestimado,0))
                 
 
 def app5():
