@@ -460,7 +460,7 @@ def app4():
         st.write("Los gastos de estructura estimados para", nro_hectareas, "hectáreas son de", gastos, "dólares por hectárea.")        
     
     calculados = gastos*nro_hectareas*dol
-    if nro_hectareas > 0:
+    if nro_hectareas is not None:
         st.write("Los gastos de estructura estimados son", calculados)
                 
 
