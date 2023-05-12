@@ -330,17 +330,24 @@ def app4():
         b = 296
         return round(m * nro_hectareas + b, 2)
 
-    nro_hectareas = st.session_state.dfp['Superficie (has)'].sum()
-
-    if nro_hectareas > 0:
-        gastos = gastos_estructura(nro_hectareas)
-        gestimado = gastos*nro_hectareas*dol
-        gestimado_str = "${:,.0f}".format(gestimado)
+    nro_hectareas = 0
+    gestimado = 0
+    
+    if st.session_state.dfp is not None:
+        nro_hectareas = st.session_state.dfp['Superficie (has)'].sum()
+    
+        if nro_hectareas > 0:
+            gastos = gastos_estructura(nro_hectareas)
+            gestimado = gastos*nro_hectareas*dol
+    
+    gestimado_str = "${:,.0f}".format(gestimado)
     
     right.metric("Dolar oficial", '${:,}'.format(float(dol)))
     right.write("Cuadro gastos:")
     form2 = right.form("template_form2") 
     gast = form2.number_input(f"Gastos de estructura - Estimador: {gestimado_str}", step=1)
+
+
     arrendamiento = form2.number_input("Gastos de arrendamiento", step=1)
     aparceria = form2.number_input("Porcentaje de aparcería", step=1)
     aparceria = aparceria/100
