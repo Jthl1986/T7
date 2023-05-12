@@ -459,6 +459,9 @@ def app4():
         gastos = gastos_estructura(nro_hectareas)
         st.write("Los gastos de estructura estimados para", nro_hectareas, "hectáreas son de", gastos, "dólares por hectárea.")        
     
+    calculados = gastos*nro_hectareas*dol
+    st.write("Los gastos de estructura estimados son", calculados)
+                
 
 def app5():
     st.markdown('<h4 style="margin-top: -60px; text-align: center;">Cuadro resumen Actividad Agropecuaria</h1>', unsafe_allow_html=True)
