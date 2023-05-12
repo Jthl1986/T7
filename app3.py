@@ -333,7 +333,6 @@ def app4():
     arrendamiento = form2.number_input("Gastos de arrendamiento", step=1)
     aparceria = form2.number_input("Porcentaje de aparcería", step=1)
     aparceria = aparceria/100
-    submit2 = form2.form_submit_button("Ingresar")
     
     #unpacking
     url = 'https://raw.githubusercontent.com/Jthl1986/T5/master/dataframe.xlsx'
@@ -463,6 +462,7 @@ def app4():
     
     gestimado_str = "${:,.0f}".format(gestimado)    
     gast = form2.number_input(f"Gastos de estructura - Estimador: {gestimado_str}", step=1)
+    submit2 = form2.form_submit_button("Ingresar")
     
     if submit2:
         st.session_state.df1 = [arrendamiento, gast, aparceria]
