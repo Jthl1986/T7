@@ -24,7 +24,7 @@ from bs4 import BeautifulSoup
 import streamlit_marquee as marquee
 import altair as alt
 
-st.set_page_config(st.PageConfig(git_repo=None))
+st.set_page_config(hide_streamlit_style=True)
 st.set_page_config(page_title="AgroAppCredicoop",page_icon="🌱",layout="wide") 
 
 @st.experimental_memo
