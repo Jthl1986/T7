@@ -715,9 +715,7 @@ def app5():
             else:
                 left.subheader(f"Existencia de hacienda: ${valuacion_total:,}")
                 left.table(dfa.style.format({"Cantidad":"{:.0f}", "Peso":"{:.0f}", "Valuación":"${:,}"}))
-
-
-        
+  
         
     #topLeftMargin * 20 es donde manejas el ancho
     #allowTaint: true, scale: 3  es la definicion
@@ -818,7 +816,7 @@ with st.sidebar:
         st.components.v1.html(f'<marquee behavior="scroll" direction="left" scrollamount="2">{news_html}</marquee>', height=30)
     st.markdown("---")
     st.caption("Desarrollado por JSantacecilia para Equipo Agro Banco Credicoop")
-    #st_lottie(lottie_book, speed=0.5, height=50, key="initial")
+    st_lottie(lottie_book, speed=0.5, height=50, key="initial")
     
             
 # Mantenimiento app
