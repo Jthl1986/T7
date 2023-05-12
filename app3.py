@@ -25,6 +25,7 @@ import streamlit_marquee as marquee
 import altair as alt
 
 st.set_page_config(page_title="AgroAppCredicoop",page_icon="🌱",layout="wide") 
+st.set_page_config(st.PageConfig(git_repo=None))
 
 @st.experimental_memo
 def load_unpkg(src: str) -> str:
