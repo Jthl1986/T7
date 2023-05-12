@@ -324,30 +324,12 @@ def app4():
     else:
         print("Failed to retrieve data")
     
-    #estimador gastos de estructura
-    def gastos_estructura(nro_hectareas):
-        m = -0.078
-        b = 296
-        return round(m * nro_hectareas + b, 2)
 
-    nro_hectareas = 0
-    gestimado = 0
-    
-    if st.session_state.dfp is not None:
-        nro_hectareas = st.session_state.dfp['Superficie (has)'].sum()
-    
-        if nro_hectareas > 0:
-            gastos = gastos_estructura(nro_hectareas)
-            gestimado = gastos*nro_hectareas*dol
-    
-    gestimado_str = "${:,.0f}".format(gestimado)
     
     right.metric("Dolar oficial", '${:,}'.format(float(dol)))
     right.write("Cuadro gastos:")
     form2 = right.form("template_form2") 
-    gast = form2.number_input(f"Gastos de estructura - Estimador: {gestimado_str}", step=1)
-
-
+    
     arrendamiento = form2.number_input("Gastos de arrendamiento", step=1)
     aparceria = form2.number_input("Porcentaje de aparcería", step=1)
     aparceria = aparceria/100
@@ -463,6 +445,25 @@ def app4():
         if not st.session_state.dfp.empty:
             st.session_state["ingresos_totales"] -= st.session_state.dfp["Ingreso"].iloc[-1]
             st.session_state.dfp = st.session_state.dfp.iloc[:-1]
+    
+    #estimador gastos de estructura
+    def gastos_estructura(nro_hectareas):
+        m = -0.078
+        b = 296
+        return round(m * nro_hectareas + b, 2)
+    nro_hectareas = 0
+    gestimado = 0
+    
+    if st.session_state.dfp is not None:
+        nro_hectareas = st.session_state.dfp['Superficie (has)'].sum()
+    
+        if nro_hectareas > 0:
+            gastos = gastos_estructura(nro_hectareas)
+            gestimado = gastos*nro_hectareas*dol
+    
+    gestimado_str = "${:,.0f}".format(gestimado)    
+    gast = form2.number_input(f"Gastos de estructura - Estimador: {gestimado_str}", step=1)
+    
     if submit2:
         st.session_state.df1 = [arrendamiento, gast, aparceria]
         
