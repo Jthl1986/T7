@@ -307,6 +307,10 @@ def app3():
      """)
     components.iframe("https://dashboard.crc-sas.org/informes/como-estamos/", height = 1500)
     st.caption("Datos extraidos de https://sissa.crc-sas.org/novedades/publicaciones-y-reportes-tecnicos/")
+
+def app8():
+    st.title("⛅️ Rindes estimados")    
+    components.iframe("https://app.powerbi.com/view?r=eyJrIjoiM2FjYTQ0ODEtYWFiZC00ODQ3LWIwYzEtZjZlNzBkMzJmYjRmIiwidCI6Ijg5MWFjN2RjLWRjMjUtNDQwMC1iMDY3LTlhNTQyM2YyOWE3MiJ9", height = 1500)
     
 
 def app4():
@@ -792,6 +796,8 @@ elif my_button == 'Servicios agrícolas':
     app2()
 elif my_button == 'Condiciones climáticas':
     app3()
+elif my_button == 'Rendimientos estimados':
+    app8()
 elif my_button == 'Cuadro resumen':
     app5()
 else:    
