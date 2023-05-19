@@ -309,7 +309,7 @@ def app3():
     st.caption("Datos extraidos de https://sissa.crc-sas.org/novedades/publicaciones-y-reportes-tecnicos/")
 
 def app8():
-    st.title("⛅️ Rindes estimados")
+    st.title("🌱 Rindes estimados")
     fecha = "18/05/2023"
     st.caption(f"Datos extraidos de la Bolsa de Cereales, Panorama Agrícola Semanal al {fecha}")    
     components.iframe("https://app.powerbi.com/view?r=eyJrIjoiM2FjYTQ0ODEtYWFiZC00ODQ3LWIwYzEtZjZlNzBkMzJmYjRmIiwidCI6Ijg5MWFjN2RjLWRjMjUtNDQwMC1iMDY3LTlhNTQyM2YyOWE3MiJ9", height = 900)
