@@ -310,7 +310,7 @@ def app3():
 
 def app8():
     st.title("⛅️ Rindes estimados")    
-    components.iframe("https://app.powerbi.com/view?r=eyJrIjoiM2FjYTQ0ODEtYWFiZC00ODQ3LWIwYzEtZjZlNzBkMzJmYjRmIiwidCI6Ijg5MWFjN2RjLWRjMjUtNDQwMC1iMDY3LTlhNTQyM2YyOWE3MiJ9", height = 1500)
+    components.iframe("https://app.powerbi.com/view?r=eyJrIjoiM2FjYTQ0ODEtYWFiZC00ODQ3LWIwYzEtZjZlNzBkMzJmYjRmIiwidCI6Ijg5MWFjN2RjLWRjMjUtNDQwMC1iMDY3LTlhNTQyM2YyOWE3MiJ9", height = 1000)
     
 
 def app4():
